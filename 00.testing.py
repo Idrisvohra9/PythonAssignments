@@ -1,14 +1,14 @@
-stR = "Hello, world!"
-# strArr = list(stR)
+from tkinter import *
 
-# print(strArr)
-# print(len(strArr))
-# print(len(stR))
-def removeDuplicate(str):
-    strArr = list(str)
-    for i in range(0, len(strArr)-1):
-        if(strArr.count(strArr[i])>1):
-            newStrArr = strArr.remove(strArr[i])
-            return newStrArr
-arr = []
-print(removeDuplicate(stR))
+w = Tk()
+
+w.geometry("500x400")
+w.title("Testing")
+
+btn1 = Button(text="Click me",width="6", height="2")
+
+btn1.pack()
+
+
+# btn1.place(anchor="center")
+w.mainloop()

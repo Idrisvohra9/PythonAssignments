@@ -3,13 +3,11 @@ import random
 
 w = Tk()
 w.geometry("640x560")
-SelectFace = ""
-img =1
+
 diceFaces = [PhotoImage(file="DiceTkinter\d1.png"),PhotoImage(file="DiceTkinter\d2.png"),PhotoImage(file="DiceTkinter\d3.png"),PhotoImage(file="DiceTkinter\d4.png"),PhotoImage(file="DiceTkinter\d5.png"),PhotoImage(file="DiceTkinter\d6.png")]
 
 def Randomize():
     random.shuffle(diceFaces)
-    global SelectFace
 
     SelectFace = random.choice(diceFaces)
     display = Label(image=SelectFace,width=600,height=600)
@@ -26,7 +24,6 @@ def Randomize():
     activeforeground="white",
     command=Randomize
     )
-
 
     btn.place(x= 260, y = 0)
 

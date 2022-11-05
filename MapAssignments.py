@@ -16,7 +16,7 @@ print()
 def getOddNums(elem): 
     if(elem%2 != 0): return elem;
     # else: pass
-
+    
 def getEvenNums(elem): 
     if(elem%2 == 0): return elem;
     # else: pass;
