@@ -5,7 +5,7 @@ root=Tk()
 
 messagebox.showinfo("Info","Saved Succesfully")
 messagebox.showerror("Error","Oops Something Went Wrong")
-messagebox.askokcancel("I fucked your mom","Can't do anything.")
+messagebox.askokcancel("I Helped your mom","Can't do anything.")
 messagebox.showwarning("Warning","Warning")
 messagebox.askquestion("Are you dumb?","Probably")
 messagebox.askretrycancel("Well fuck it.","Yeah")

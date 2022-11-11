@@ -6,5 +6,6 @@ w.title('')
 
 w.config()
 
-
+spin = Spinbox(w,from_=0,to=25)
+spin.pack()
 w.mainloop()
