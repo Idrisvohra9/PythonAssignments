@@ -1,14 +1,4 @@
-from tkinter import *
+l1 = "1222"
+l = [1,2,3]
 
-w = Tk()
-
-w.geometry("500x400")
-w.title("Testing")
-
-btn1 = Button(text="Click me",width="6", height="2")
-
-btn1.pack()
-
-
-# btn1.place(anchor="center")
-w.mainloop()
+print(l1["2"])
