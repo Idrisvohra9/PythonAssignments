@@ -11,13 +11,12 @@ database = client["student"]
 
 # collection
 col = database["student_info"]
-output = Label(w, text="Output", fg="green", bg="darkslategray4")
+output = Label(w, text="Output", fg="dark green", bg="darkslategray4")
 output.grid(row=6, column=0)
 # insert
 def HandleInsert():
     name = e1.get()
     col.insert_one({"name": name})
-    e1.delete(0, END)
     output.config(text="Data sucessfully inserted...")
 
 

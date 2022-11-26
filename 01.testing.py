@@ -1,19 +1,8 @@
-from tkinter import *
+from pymongo import MongoClient
 
-w=Tk()
-w.geometry("400x400")
+client = MongoClient("localhost", 27017)
 
-def gotosecondWindow():
-    # to create second window
-    second=Toplevel(w)
-    second.geometry("300x300")
-    btn2=Button(second,text="First")
-    btn2.pack()
-    # to delete first window
-    w.withdraw()
-    second.mainloop()
+db = client.get_database("Student_DB")
 
-
-btn=Button(w,text="Open",command=gotosecondWindow)
-btn.pack()
-w.mainloop()
+coll = db.get_collection("student_Data")
+coll.

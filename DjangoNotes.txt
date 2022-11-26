@@ -1,0 +1,50 @@
+* Django:
+The Django web framework is a free, open source framework that can speed
+up development of a web application being built in the Python programming
+language.
+
+# Commands to create the Django project:
+Enter Command in Vs code Terminal
+
+a. pip install virtualenv
+b. virtualenv env
+c. env\Scripts\activate.bat
+d. pip install Django
+e. django-admin startproject <project-name>
+f. cd <project-name>
+g. python manage.py runserver
+
+manage.py :- This file is used basically as a command-line utility and for
+deploying, debugging, or running our web application
+a. runserver: This command is used to run the server for our web application.
+b. Migration: This is used for applying the changes done to our models into the database.
+That is if we make any changes to our database then we use migrate command. This is
+used the first time we create a database.
+c. Makemigration: this is done to apply new migrations that have been carried out due to the changes in the database.
+
+Project Structure:
+
+main project
+    app - folder
+        template
+            html files(configure in settings)
+    project - folder
+    static - folder
+        styles
+            css files
+        JS
+            js files
+        images 
+            image files
+    manage.py - file
+
+settings.py
+    1. INSTALLED_APPS = APPNAME
+    2. TEMPLATES = BASE_DIR/'templates'
+    3. after STATIC_URL =  STATICFILES_DIR = [
+        BASE_DIR / 'static'
+    ]
+
+{% include 'navbar.html' %}
+{% load static %}
+<img src="{% static "images/a.png" %}">
