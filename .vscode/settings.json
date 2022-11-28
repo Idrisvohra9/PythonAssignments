@@ -1,4 +1,10 @@
 {
     "python.formatting.provider": "black",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.autoComplete.extraPaths": [
+    
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.analysis.extraPaths": []
 }

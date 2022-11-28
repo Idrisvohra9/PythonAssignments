@@ -56,7 +56,7 @@ def delete():
 def delete_all():
     col.delete_many({})
     for item in tree.get_children():
-        tree.delete(item)    
+        tree.delete(item)
 
 def update():
     col.update_one({"name": name_entry.get(),"age":age_entry.get()}, {"$set": {"name": name_entry.get(),"age":age_entry.get()}})

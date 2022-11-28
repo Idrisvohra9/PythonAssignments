@@ -30,7 +30,7 @@ def HandleGet():
 
 # to delete value from collection
 def HandleDelete():
-    col.delete_one({"name": e1.get()})
+    x = col.delete_one({"name": e1.get()})
     output.config(text="Deleted Sucessfully...")
 
 
