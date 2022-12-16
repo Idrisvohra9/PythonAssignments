@@ -7,5 +7,5 @@ urlpatterns = [
     path("About", views.about, name="About"),
     # We can also name it similar name so even if a spelling mistake occurs it still goes to the about page
     path("about", views.about, name="About"),
-    path("form", views.form, name="Form"),
+    path("", views.index, name="Form"),
 ]

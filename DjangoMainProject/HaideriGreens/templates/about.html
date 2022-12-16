@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haideri Greens - About Us</title>
+    {% include "head.html" %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="nav-brand">
+            <div class="groupLogo">
+              <img src="/static/images/IconImage4.png" alt="Logo Image" class="img-fluid">
+              <i class="logo"></i>
+            </div>
+          </div>
+          <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="About">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Visit">Visit us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Donate">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="basket">
+                <i class="basket"></i>
+              </a>
+            </li>
+            <li class="login-btn">
+              <a href="login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% include "header.html" %}
+      <section>
+        <div class="container d-flex justify-content-center mt-3">
+          <div class="about-feature">
+            <div class="content">
+                <div class="front">
+                    <h3 class="title">Hey</h3>
+                    <p class="subtitle">Hover me :)</p>
+                </div>
+     
+                <div class="back">
+                    <p class="description">
+                        We are hiring if you are interested :)
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="jumbo text-center mt-3 mb-5">
+          <h2>Our services:</h2>
+          <div class="display">
+            <img src="{% static 'images/deliveryboy.png'%}" alt="" />
+          </div>
+          <h4>
+            We aim to provide the best products and with doorstep delivery
+            services,<br />
+            it all gets included in the reasonable price of products!
+          </h4>
+        </div>
+        <div class="jumbo text-center mt-3 mb-5">
+          <h2>Customer Care:</h2>
+          <div class="display">
+            <img src="{% static 'images/happy female.png'%}" alt="" />
+          </div>
+          <h4>
+            Customer satisfaction is always our number one priority. <br />
+            Helpline is open 24/7 with toll free number provided
+            <a href="#contacts">here</a>.
+          </h4>
+        </div>
+        <div class="jumbo text-center mt-3 mb-5">
+          <h2>Donate:</h2>
+          <div class="display">
+            <img src="{% static 'images/donate.jpg'%}" alt="" />
+          </div>
+          <h4>
+            <a href="Donate">Donate</a> money to a good cause! <br />
+            the money goes to the unfortunate starving people of india.
+          </h4>
+        </div>
+        <div class="jumbo text-center mt-4 mb-5">
+          <h2>Join the revolution:</h2>
+          <div class="display">
+            <img src="{% static 'images/gogreen.jpg'%}" alt="" />
+          </div>
+          <h4>
+            Help grow the nature and reduce pollution. <br />
+            Join the Go Green Revlution with us!
+          </h4>
+        </div>
+      </section>
+    {% include "footer.html" %}
+</body>
+</html>

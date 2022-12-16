@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haideri Greens - Products</title>
+
+    {% include "head.html" %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="nav-brand">
+                <div class="groupLogo">
+                    <img src="/static/images/IconImage4.png" alt="Logo Image" class="img-fluid">
+                    <i class="logo"></i>
+                </div>
+            </div>
+            <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Visit">Visit us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Donate">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="basket">
+                            <i class="basket"></i>
+                        </a>
+                    </li>
+                    <li class="login-btn">
+                        <a href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% include "header.html" %}
+    <section class="container-fluid">
+        <h2>Offers & Discounts:</h2>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                    class=""></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                    class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/vegies2.jpg' %}" alt="" class="img-fluid" />
+                    <div class="container-fluid">
+                        <div class="carousel-caption">
+                            <h1>First purchase discount!</h1>
+                            <p>
+                                Buy fruits/vegetables of ₹200 and get free delivery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/fruits.jpg' %}" alt="" class="img-fluid" />
+                    <div class="container-fluid">
+                        <div class="carousel-caption text-center">
+                            <h1>Membership offer</h1>
+                            <p>
+                                Become a member @ ₹4000/- and enjoy 10% discount on every purchase for a year!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/vegies3.jpg' %}" alt="" class="img-fluid" />
+                    <div class="container-fluid">
+                        <div class="carousel-caption text-center">
+                            <h1>Activate other benefits.</h1>
+                            <ul>
+                                <li>Buy vegetables of ₹150 & get 200gms of any fruit of your choice for free.</li>
+                                <li>Buy fruits of ₹500 & get 200gms of green grapes for free.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#myCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-dark" type="button" data-bs-target="#myCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <input type="text" placeholder="Search for products..." class="form-control input m-5 w-75">
+        <div class="container d-flex justify-content-evenly mb-3">
+            <a href="#fruits" class="btn btn-dark w-50">Fruits</a>
+            <a href="#veggies" class="btn btn-dark w-50">Vegetables</a>
+        </div>
+        <h2>Availabe Fresh Fruits:</h2>
+        <div class="fruits-section" id="fruits">
+
+        </div>
+        <div class="vegetables-section" id="veggies">
+
+        </div>
+        <h2>Available Fresh Vegetables:</h2>
+    </section>
+    {% include "footer.html" %}
+</body>
+
+</html>

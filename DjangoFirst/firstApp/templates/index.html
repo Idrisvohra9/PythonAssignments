@@ -9,7 +9,31 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Hello, {{Name}} This is Home page</h1>
-    
+    <h1>Hello, {{fname}} This is Home page</h1>
+    <h3>Your Information:</h3>
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td>{{fname}}</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>{{lname}}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{email}}</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>{{password}}</td>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i.fname}}</td>
+        </tr>
+        {%endfor %}
+    </table>
+    <img src="{% static 'images/deliveryboy.png'%}" alt="">
 </body>
 </html>

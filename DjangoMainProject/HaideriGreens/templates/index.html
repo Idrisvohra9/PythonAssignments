@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en-IN">
+
+<head>
+  <title>Haideri Greens - Veggie Store</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  {% include 'head.html'%}
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="nav-brand">
+        <div class="groupLogo">
+          <img src="/static/images/IconImage4.png" alt="Logo Image" class="img-fluid" />
+          <i class="logo"></i>
+        </div>
+      </div>
+      <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Visit">Visit us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Donate">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="basket">
+              <i class="basket"></i>
+            </a>
+          </li>
+          <li class="login-btn">
+            <a href="#login" data-bs-toggle="modal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% include 'header.html' %}
+  {% include "login.html" %}
+  <section class="store-content container-fluid">
+    <h2>Some of the great souls connected with us:</h2>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/farmer1.png' %}" alt="" class="img-fluid" />
+
+          <div class="container-fluid">
+            <div class="carousel-caption">
+              <h1>Farmers of India</h1>
+              <p>
+                The products directly come from the local farms in the
+                nearby villages.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/farmer2.png' %}" alt="" class="img-fluid" />
+
+          <div class="container-fluid">
+            <div class="carousel-caption text-center">
+              <h1>Appreciate their hard work.</h1>
+              <p>
+                The large amount of the selling price of the products goes
+                directly to the farmers in increasing their lifestyles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next bg-dark" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h2>Latest offers:</h2>
+    <div class="container">
+      <div class="offer shadow-sm">
+        <div class="col-sm-4">
+          <img src="{% static 'images/vegies1.jpg' %}" alt="" class="img-fluid rounded-2" />
+        </div>
+        <div class="col-sm-8 m-2">
+          <h4>
+            Buy vegetables of ₹150 & get 200gms of any fruit of your choice
+            for free.
+          </h4>
+          <p>
+            Add to basket the vegetables of your choice and get the fruits of
+            your choice for free!
+          </p>
+          <a href="" class="btn btn-dark">Browse Veggies</a>
+        </div>
+      </div>
+      <div class="offer shadow-sm">
+        <div class="col-sm-4">
+          <img src="{% static 'images/fruits.jpg' %}" alt="" class="img-fluid rounded-2" />
+        </div>
+        <div class="col-sm-8 m-2">
+          <h4>Buy fruits of ₹500 & get 200gms of green grapes for free.</h4>
+          <p>Add to basket the fruits of your choice!</p>
+          <a href="" class="btn btn-dark">Browse Fruits</a>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center bg-dark rounded-2 p-3 mt-3 store-feature">
+      <div class="small-items">
+        <div class="item item--1">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path fill="rgba(149,149,255,1)"
+              d="M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zm-8 1.173v3.05l3-1.8 3 1.8v-3.05A7.978 7.978 0 0 1 12 17a7.978 7.978 0 0 1-3-.582zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12z">
+            </path>
+          </svg>
+          <span class="quantity"> 30+ </span>
+          <span class="text text--1"> Organic farming awards </span>
+        </div>
+        <div class="item item--2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+            <path
+              d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"
+              fill="rgba(252,161,71,1)"></path>
+          </svg> <span class="quantity"> 10+ </span>
+          <span class="text text--2"> Nature based fertilizers </span>
+        </div>
+        <div class="item item--3">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path fill="rgba(66,193,110,1)"
+              d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z">
+            </path>
+          </svg>
+          <span class="quantity"> 20+ </span>
+          <span class="text text--3"> Farms </span>
+        </div>
+        <div class="item item--4">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path fill="rgba(220,91,183,1)"
+              d="M12 20h8v2h-8C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10a9.956 9.956 0 0 1-2 6h-2.708A8 8 0 1 0 12 20zm0-10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-4 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm8 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-4 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z">
+            </path>
+          </svg>
+          <span class="quantity"> 30+ </span>
+          <span class="text text--4"> Success stories </span>
+        </div>
+      </div>
+    </div>
+    <h2>Seasonal Fruits:</h2>
+    <div class="container goods-showcase d-flex justify-content-between flex-wrap">
+      <div class="gs">
+        <img src="{% static 'images/green-grapes.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Green Grapes</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/pineapple.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Pineapples</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/kiwi.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Kiwis</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/orange.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Oranges</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/dragon-fruit.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Dragon fruits</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Trending vegetables:</h2>
+    <div class="container goods-showcase d-flex justify-content-between flex-wrap">
+      <div class="gs">
+        <img src="{% static 'images/chillies.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Green Chillies</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/beans.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Green Beans</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/fresh-cucumbers.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Fresh Cucumbers</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+      <div class="gs">
+        <img src="{% static 'images/lemons.jpg'%}" alt="" class="gs-img">
+        <ul class="opts">
+          <li>
+            <i class="basket"></i>
+          </li>
+        </ul>
+        <div class="gs-info text-light bg-dark">
+          <p class="title">Fresh Lemons</p>
+          <p class="subtitle"><a href="Products" class="btn btn-dark border border-info">See more</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbo text-center mt-3 mb-5">
+      <h2>Our services:</h2>
+      <div class="display">
+        <img src="{% static 'images/deliveryboy.png'%}" alt="" />
+      </div>
+      <h4>
+        We aim to provide the best products and with doorstep delivery
+        services,<br />
+        it all gets included in the reasonable price of products!
+      </h4>
+    </div>
+    <div class="jumbo text-center mt-3 mb-5">
+      <h2>Customer Care:</h2>
+      <div class="display">
+        <img src="{% static 'images/happy female.png'%}" alt="" />
+      </div>
+      <h4>
+        Customer satisfaction is always our number one priority. <br />
+        Helpline is open 24/7 with toll free number provided
+        <a href="#contacts">here</a>.
+      </h4>
+    </div>
+    <div class="jumbo text-center mt-3 mb-5">
+      <h2>Donate:</h2>
+      <div class="display">
+        <img src="{% static 'images/donate.jpg'%}" alt="" />
+      </div>
+      <h4>
+        <a href="Donate">Donate</a> money to a good cause! <br />
+        the money goes to the unfortunate starving people of india.
+      </h4>
+    </div>
+    <div class="jumbo text-center mt-4 mb-5">
+      <h2>Join the revolution:</h2>
+      <div class="display">
+        <img src="{% static 'images/gogreen.jpg'%}" alt="" />
+      </div>
+      <h4>
+        Help grow the nature and reduce pollution. <br />
+        Join the Go Green Revlution with us!
+      </h4>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</body>
+
+</html>

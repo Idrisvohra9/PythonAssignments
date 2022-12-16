@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "DjangoFirst.wsgi.application"
 
-# Username: Idrsis |Pass: Vohra987
+# Username: Idris |Pass: Vohra987
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 

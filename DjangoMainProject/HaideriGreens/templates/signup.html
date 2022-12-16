@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Haideri Greens - Login</title>
+  {% include "head.html" %}
+</head>
+
+<body class="inLogin">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="nav-brand">
+        <div class="groupLogo">
+          <img src="/static/images/IconImage4.png" alt="Logo Image" class="img-fluid" />
+          <i class="logo"></i>
+        </div>
+      </div>
+      <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Visit">Visit us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Donate">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="basket">
+              <i class="basket"></i>
+            </a>
+          </li>
+          <li class="login-btn">
+            <a href="#login" data-bs-toggle="modal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="header bg-dark">
+    <div class="header-text col-sm-6">
+      <h1>Sign up! & become our <span>esteemed customer.</span></h1>
+      <small>Signing up will enable a ton of features & savings. You can become a premium member to save more at a
+        single price. Or you can create a free account & still get good prices & enjoy our offers free of cost!</small>
+      <div class="conatiner d-flex p-2">
+        <div id="google_translate_element" class='btn btn-success w-25'>Translate Page</div>
+      </div>
+      <script>// <![CDATA[
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+        // ]]>
+      </script>
+      <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        type="text/javascript"></script>
+    </div>
+    <div class="country btn btn-success">&#x1F1EE;&#x1F1F3; India</div>
+  </section>
+  {% include "login.html" %}
+
+  <section class="bg-light col-sm-6 h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <table class="registerForm">
+        <tr>
+          <td><label for="uname" class="col-sm-2 col-form-label">Username: </label></td>
+          <td><input type="text" name="uname" class="form-control" id="uname" placeholder="Shakir Vohra Bhai"></td>
+        </tr>
+        <tr>
+          <td><label for="email" class="col-sm-2 col-form-label">Email: </label></td>
+          <td><input type="email" name="email" class="form-control" id="email" placeholder="shakirbhai987@gmail.com">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="inputPassword" class="col-sm-2 col-form-label">Password: </label></td>
+          <td><input type="password" name="pass" class="form-control" id="inputPassword"></td>
+        </tr>
+        <tr>
+          <td><label for="dob" class="col-sm-2 col-form-label">Date Of Birth: </label></td>
+          <td><input type="date" name="dob" class="form-control" id="dob"></td>
+        </tr>
+      </table>
+
+
+      <input type="submit" value="Sign up" class="btn btn-primary">
+      <input type="reset" value="Clear" class="btn btn-secondary">
+    </form>
+  </section>
+  </div>
+  {% include "footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0 mb-4">
+    <img src="/static/img/contact.jfif" class="d-block w-100" alt="...">
+</div>
+
+<div class="container mb-4 py-2">
+
+    <h1 class="text-center">CONTACT US</h1>
+    <form method="post" action="/contact/">
+    {% csrf_token %}    
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+        </div>
+
+        <div class="mb-3">
+            <label for="desc">Tell me about what you want to contact me for...</label>
+            <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+<div class="cointainer my-4">
+    <div class="card text-center">
+        <div class="card-header" style="background-color:darkmagenta;color:white;">
+            Subscribe for Special Promotions and Deals
+        </div>
+        <div class="card-body">
+            <h5 class="card-title my-3">SHARMA TYRES</h5>
+            <p class="card-text">Brands : BMW, FORD, MUSTANG, BUGATI, TOYOTA.</p>
+            <p class="card-text">Address : 1a, Shiv Shakti residency first floor,near Palm
+                Hotel,Bapunagar,Ahmedabad-380024</p>
+            <p class="card-text">Partners : Apollo , MRF, Goodyear, Continental, Michelin tyres.</p>
+            <a href="#" class="btn btn-secondary">Subscribe</a>
+        </div>
+        <div class="card-footer text-muted" style="background-color:ghostwhite">
+            Copyright © 2022 . All rights reserved.
+        </div>
+    </div>
+</div>
+{% endblock body %}

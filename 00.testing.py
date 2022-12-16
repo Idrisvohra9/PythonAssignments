@@ -1,5 +1,8 @@
-d = {
-    "n": 1
-}
+from tkinter import *
 
-print(f"{d['n']}")
+w = Tk()
+w.geometry('500x500')
+w.title('')
+
+w.config()
+w.mainloop()

@@ -1,0 +1,40 @@
+this is a test file for static page...
+
+# for queries search Making Queries Django.
+
+PS D:\Python Project\first> python manage.py shell    
+Python 3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from home.models import Contact
+>>> Contact.objects.all()
+<QuerySet [<Contact: Aryansa@gmail.com>, <Contact: jaysa@gmail.com>, <Contact: idrissa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.all()[0]
+<Contact: Aryansa@gmail.com>
+>>> Contact.objects.all()[0].name
+'Aryan'
+>>> Contact.objects.all()[0].email
+'sa@gmail.com'
+>>> Contact.objects.all()[0].desc 
+'this is me'
+>>> Contact.objects.filter(name="Aryan")
+<QuerySet [<Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.filter(name="Aryan",phone="1234567890") 
+<QuerySet [<Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.filter(name="Aryan",phone="1234567890") 
+<QuerySet [<Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> ins = Contact.objects.filter(name="Aryan",phone="1234567890")[0]
+>>> ins.phone = "9999999999"
+>>> ins.save()
+>>> Contact.objects.filter(name="Aryan") 
+<QuerySet [<Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.filter(name="Aryan",phone="9999999999") 
+<QuerySet [<Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.filter(name="Aryan").first()         <Contact: Aryansa@gmail.com>
+>>> Contact.objects.filter(name="Aryan").last() 
+<Contact: Aryansa@gmail.com>
+>>> Contact.objects.all()                                <QuerySet [<Contact: Aryansa@gmail.com>, <Contact: jaysa@gmail.com>, <Contact: idrissa@gmail.com>, <Contact: Aryansa@gmail.com>, <Contact: Aryansa@gmail.com>]>
+>>> Contact.objects.all().first()
+<Contact: Aryansa@gmail.com>
+>>> Contact.objects.all().last() 
+<Contact: Aryansa@gmail.com>

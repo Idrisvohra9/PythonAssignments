@@ -1,0 +1,34 @@
+dependencies :- jakarta
+
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+mysql connector :-
+
+<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+	<dependency>
+    	<groupId>com.mysql</groupId>
+    	<artifactId>mysql-connector-j</artifactId>
+    	<version>8.0.31</version>
+	</dependency>
+
+javax dependencies :-
+
+<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>4.0.1</version>
+    	<scope>provided</scope>
+	</dependency>
+
+html imports :-
+
+<%@page import="com.mysql.cj.xdevapi.Session"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="java.sql.*"%>
+<%@page import="jakarta.servlet.*,jakarta.servlet.http.*,java.io.*"%>

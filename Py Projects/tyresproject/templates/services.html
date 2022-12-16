@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}services{% endblock title %}
+
+{% block body %}
+
+<h1 class="text-center my-3">SERVICES</h1>
+
+<div class="container my-4">
+    <hr>
+    <h3>CART</h3>
+    <div class="card mb-3 my-4">
+        <img src="/static/img/cart2.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Your cart is empty !!</h5><br>
+          <p class="card-text">Looks like you have not added anything to your cart. Go ahead and explore top categories.</p>
+          <br>
+          <a href="/shop/" class="btn btn-primary">Go to shop</a>
+        </div>
+      </div>
+
+</div>
+
+<div class="container mb-4 py-2 my-4">
+
+    <h3>CUSTOMER DETAILS</h3><br>
+    <form method="post" action="/services/">
+    {% csrf_token %}    
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+        </div>
+
+        <div class="mb-3">
+            <label for="address">Shipping Address</label>
+            <textarea class="form-control" id="address" rows="3" name="address"></textarea>
+        </div>
+  
+        <div class="mb-3">
+            <label for="pname">Product Name or ID</label>
+            <input type="text" class="form-control" id="pname" name="pname" placeholder="Enter Your Product Name or ID">
+        </div>
+  
+        <div class="mb-3">
+            <label for="pay">Payment Mode (cash/Online)</label>
+            <input type="text" class="form-control" id="pay" name="pay" placeholder="Cash or Online">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+<div class="cointainer my-4">
+    <div class="card text-center">
+        <div class="card-header" style="background-color:darkmagenta;color:white;">
+            Subscribe for Special Promotions and Deals
+        </div>
+        <div class="card-body">
+            <h5 class="card-title my-3">SHARMA TYRES</h5>
+            <p class="card-text">Brands : BMW, FORD, MUSTANG, BUGATI, TOYOTA.</p>
+            <p class="card-text">Address : 1a, Shiv Shakti residency first floor,near Palm
+                Hotel,Bapunagar,Ahmedabad-380024</p>
+            <p class="card-text">Partners : Apollo , MRF, Goodyear, Continental, Michelin tyres.</p>
+            <a href="#" class="btn btn-secondary">Subscribe</a>
+        </div>
+        <div class="card-footer text-muted" style="background-color:ghostwhite">
+            Copyright © 2022 . All rights reserved.
+        </div>
+    </div>
+</div>
+{% endblock body %}

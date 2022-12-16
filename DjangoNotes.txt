@@ -33,7 +33,7 @@ g. python manage.py runserver (start the server)
 4. change the path of url in the urls.py file (of project ) to include the urls of app
 5. copy-paste the basic content of project's urls.py file to the app's urls.py file and from <app-name> import views.
 6. changes in settings.py
-    1. INSTALLED_APPS += APPNAME
+    1. INSTALLED_APPS += APPNAME.apps.class_in_apps
     2. TEMPLATES = BASE_DIR/'templates'
     3. STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static/"),
@@ -108,3 +108,11 @@ c. login in the admin panel
 d. create a class model in the model.py file of the app 
 e. register it in the admin.py file of the app
 f. migrate and then start the server again
+
+* Make a page not found default page:
+
+Create a 404.html in templates
+
+* Providing a link to other html page:
+
+Use the path route of the app's urls.py as the href of anchor tag.

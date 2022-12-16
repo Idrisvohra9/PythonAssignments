@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+{% block content %}
+
+
+<form method="post" action="login">
+  {% csrf_token %}
+
+  
+  <form method="post" action="">
+        Name:
+        <input type="text" name="name"><br><br>
+        type:
+        <input type="text" name="type"><br><br>
+        description:
+        <input type="text" name="description"><br><br>
+       <input type="submit" value="submit"> 
+
+    </form>
+
+
+<table class="w-100 border border-dark">
+  <th>id</th>
+  <th>name</th>
+  <th>type</th>
+  <th>description</th>
+  <th>delete</th>
+  <th>update</th>
+  {% for i in data %}
+  <tr>
+  <td>{{i.id}}</td>
+  <td>{{i.name}}</td>
+  <td>{{i.type}}</td>
+  <td>{{i.description}}</td>
+  <td><a href="delete/{{i.id}}">delete</a></td>
+  <td><a href="update/{{i.id}}">update</a></td>
+  
+</tr>
+  {% endfor %}
+</table>
+{% endblock content %}
